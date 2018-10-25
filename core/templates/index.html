@@ -4,50 +4,68 @@
 
 {% block conteudo %}
 
-<style>
-    .center {
-        text-align: center;
-        font-weight: bold;
-    }
-    .justify {
-        text-align: justify;
-    }
-    p.thick {
-        font-weight: bold;
-    }
 
-</style>
-<div class="center">
-    <a class="btn btn-primary" href="#" role="button">INSCREVA-SE JÁ</a>
-    </div><br>
-<div class="center">
-    <h2 class="text-primary">CONHEÇA NOSSOS CURSOS</h2>
-</div>
-    <p class="justify">
-        Considerada uma das melhores faculdades com foco em tecnologia do País, 
-        a Faculdade Impacta oferece cursos de Graduação, Pós-Graduação e MBA e cursos técnicos. 
-        Conheça quais são as áreas de conhecimento que a Impacta aborda e saiba um pouco mais sobre cada curso:
-    </p>
-<div class="center">
-    <a class="btn btn-primary" href="cursos/Graduacao" role="button">Ver Curso</a>
-    <a class="btn btn-primary" href="cursos/Pos-Graduacao" role="button">Ver Curso</a>
-    <a class="btn btn-primary" href="cursos/Tecnico" role="button">Ver Curso</a>
-    </div><br>
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/app.css?v=2.3">
 
-<div class="center">
-        <button type="button" class="btn btn-primary">VESTIBULAR 2019</button>
-    </div>
 
-<div class="center">
-    <h2 class="text-primary">PRÊMIOS E RECONHECIMENTOS</h2>
-</div>
-    <p class="justify">
-        A Faculdade Impacta é altamente reconhecida por sua atuação no mercado da educação, 
-        o que comprova o compromisso da Instituição com o ensino de qualidade e a dedicação do 
-        Grupo Impacta em transformar a sociedade através da tecnologia. Desta maneira, 
-        ao longo dos anos a Faculdade Impacta tem recebido prêmios e reconhecimentos 
-        que são resultados do trabalho contínuo de professores e funcionários e da determinação de seus alunos.
-    </p>
-
+    <header id="header">
+        <div class="row">
+            <div class="one column">
+                <div class="row">
+                    <div class="row bg">
+                        <div class="container">
+                            <div class="one column">
+                                <h1>
+                                        FACULDADE IMPACTA
+                                </h1>
+                                <a href="" class="btn btn-blue center">INSCREVA-SE JÁ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </header>
+    <section>
+            <div class="row">
+                <div class="center">
+                    <h2 class="color">
+                        CONHEÇA NOSSOS CURSOS
+                    </h2><br>
+                        <a href="" class="btn btn-blue center">CURSOS</a>
+                        <a href="" class="btn btn-blue center">CURSOS</a>
+                        <a href="" class="btn btn-blue center">CURSOS</a>
+                </div>
+            </div>
+        </section><br><br>
+        <p class="justify">
+                Considerada uma das melhores faculdades com foco em tecnologia do País, 
+                a Faculdade Impacta oferece cursos de Graduação, Pós-Graduação e MBA e cursos técnicos. 
+                Conheça quais são as áreas de conhecimento que a Impacta aborda e saiba um pouco mais sobre cada curso:
+            </p>
+    <section><br>
+            <div class="row">
+                <div class="center">
+                    <a href="" class="btn btn-blue">VESTIBULAR 2019</a>
+                </div>
+            </div>
+    <section><br><br>
+            <div class="row">
+                <div class="center">
+                    <h2 class="color">
+                            PRÊMIOS E RECONHECIMENTOS
+                    </h2>
+                </div>
+            </div>
+    </section>
+        <p class="justify">
+            A Faculdade Impacta é altamente reconhecida por sua atuação no mercado da educação, 
+            o que comprova o compromisso da Instituição com o ensino de qualidade e a dedicação do 
+            Grupo Impacta em transformar a sociedade através da tecnologia. Desta maneira, 
+            ao longo dos anos a Faculdade Impacta tem recebido prêmios e reconhecimentos 
+            que são resultados do trabalho contínuo de professores e funcionários e da determinação de seus alunos.
+        </p>
+    </section>
 
 {% endblock  %}
