@@ -1,12 +1,10 @@
 from django import forms
 
-from django.core.mail import EmailMessage
 
 class ContatoForm(forms.Form):
 
     email = forms.EmailField()
     nome = forms.CharField()
-    #assunto = forms.
     mensagem = forms.CharField()
 
     def is_valid(self):
@@ -21,5 +19,20 @@ class ContatoForm(forms.Form):
         print("E-mail: "+self.cleaned_data["email"])
         print("Mensagem:")
         print(self.cleaned_data["mensagem"])
-        #send_mail()
 
+class LoginForm(forms.Form):
+    usuario = forms.CharField()
+    senha = forms.CharField()
+
+    def is_valid(self):
+        
+        valido = super(LoginForm, self).is_valid()
+        
+        if valido:
+            self.logar()
+        return valido
+
+    def logar(self):
+        print("Usuário: "+self.cleaned_data["usuario"])
+        print("Senha: "+self.cleaned_data["senha"])
+        

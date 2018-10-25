@@ -1,9 +1,25 @@
 {% extends "base.html" %}
 
 {% block titulo %}
-    {{ atual.sigla }}
+{{ atual.sigla }}
 {% endblock %}
 
 {% block conteudo %}
-    <h1>{{ atual.nome }}</h1>
-{% endblock  %}
+<h1>{{ atual.nome }}</h1>
+
+<div class="card" style="width: 18rem;">
+        <!-- <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap"> -->
+        <div class="card-body">
+          <h5 class="card-title">Semestre I</h5>
+          <p class="card-text">{{ atual.descricao }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Coordenador: {{ atual.coordenador }}</li>
+          <li class="list-group-item">{{ atual.grade.disciplina }}</li>
+        </ul>
+        <div class="card-body">
+        <a href="{% url 'disciplina' atual.sigla atual.grade.sigla_disciplina %}" class="card-link">Mais Detalhes</a>
+        </div>
+      </div>
+
+{% endblock %}

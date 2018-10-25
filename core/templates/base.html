@@ -43,9 +43,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'core:contato' %}">Contato</a>
                     </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="{% url 'restrito:aluno' %}">Aluno</a>
+                        </li>
                 </ul>
 
-                <a role="button" href="#" class="btn btn-outline-success">Entrar</a>
+                <a role="button" href="{% url 'core:entrar' %} " class="btn btn-outline-success">Entrar</a>
     
             </div>
         </nav>
