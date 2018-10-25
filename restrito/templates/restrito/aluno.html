@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+{{ atual.sigla }}
+{% endblock %}
+
+{% block conteudo %}
+
+    
+    <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Curso</th>
+                <th scope="col">Semestre</th>
+                <th scope="col">Turma</th>
+            </tr>
+            </thead>
+            
+            <tbody>
+            {% for turma in turmas %}
+                <tr>
+                    <td>{{turmas.nome}}</td>
+                    <td>{{turmas.semestre}}</td>
+                    <td>{{turmas.turma}}</td>
+                </tr>
+            {% endfor%}
+            </tbody>
+        </table>
+        
+
+{% endblock %}
