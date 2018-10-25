@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-{% extends "base.html" %}
-
-{% block disciplina %}
-    {{ atual.sigladisc }}
-{% endblock %}
-
-{% block sigla %}
-    <h1>{{ atual.nome }}</h1>
-{% endblock  %}
-=======
 {% extends "base.html" %}
 
 {% block titulo %}
@@ -24,14 +13,6 @@
           <h5 class="card-title">Semestre I</h5>
           <p class="card-text">{{ disciplina_data.descricao }}</p>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Coordenador: {{ atual.coordenador }}</li>
-          <li class="list-group-item">{{ atual.grade.disciplina }}</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Mais Detalhes</a>
-        </div>
       </div>
 
 {% endblock %}
->>>>>>> kleber

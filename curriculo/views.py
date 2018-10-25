@@ -2,11 +2,6 @@ from django.shortcuts import render
 
 def curso(request, sigla):
     cursos = {
-<<<<<<< HEAD
-        "SI": {"nome":"Sistemas da Informação", "sigla":"SI","disciplina":"BD"},
-        "ADS": {"nome":"Análise e Desenvolvimento de Sistemas", "sigla":"ADS"},
-        "BD": {"nome":"Banco de Dados", "sigla":"BD"}
-=======
         "SI": {"nome":"Sistemas da Informação"
              , "sigla":"SI"
              , "descricao":"A Graduação de Sistemas de Informação prepara o aluno para ser um profissional transformador do mercado, desenvolvendo soluções inovadoras e criativas na construção e utilização de Sistemas de Informação."
@@ -21,7 +16,6 @@ def curso(request, sigla):
                , "descricao":"A Graduação de Sistemas de Informação prepara o aluno para ser um profissional transformador do mercado, desenvolvendo soluções inovadoras e criativas na construção e utilização de Sistemas de Informação."
              , "coordenador": "Osvaldo Kotaro Takai"
              , "grade": {"semestre":"1","disciplina": "Fundamentos de Banco de Dados","sigla_disciplina":"FBD"}},
->>>>>>> kleber
     }
 
     context = {
@@ -29,18 +23,6 @@ def curso(request, sigla):
     }
     return render(request, "curriculo/curso.html", context)
 
-<<<<<<< HEAD
-def disciplina(request,sigladisc):
-    disciplinas = {
-        "SI": {"nome":"Fundamentos de Banco de Dados", "descricao":"BD","ementa":""},
-        "ADS": {"nome":"Linguagem de programação 1", "sigla":"LP1"},
-        "BD": {"nome":"Introdução a Internet das Coisas", "sigla":"IOT"}
-    }
-    context = {
-        "atual": disciplinas[sigladisc]
-    }
-    return render(request, "curriculo/disciplina.html", context)
-=======
 def disciplina(request,sigla,sigla_disciplina):
     context = {}
     disciplinas = {
@@ -52,4 +34,3 @@ def disciplina(request,sigla,sigla_disciplina):
         "disciplina_data": disciplinas[sigla_disciplina]
     }
     return render(request, "curriculo/disciplina.html", context)
->>>>>>> kleber
