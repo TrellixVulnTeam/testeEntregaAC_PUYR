@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "venv/bin/python"
+=======
+    "git.ignoreLimitWarning": true
+>>>>>>> douglas
 }
