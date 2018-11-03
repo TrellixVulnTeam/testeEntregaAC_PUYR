@@ -7,11 +7,23 @@
 {% block conteudo %}
 <h1>{{ disciplina.nome }}</h1>
 
-<div class="card" style="width: 18rem;">
-        <!-- <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap"> -->
-        <div class="card-body">
-          <p class="card-text">{{ disciplina.nome }}</p>
-        </div>
-      </div>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Plano de Ensino</th>
+        <th scope="col">Carga Horária</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+            <td>{{disciplina.nome}}</td>
+            <td>{{disciplina.plano_de_ensino}}</td>
+            <td>{{disciplina.carga_horaria}}</td>
+        </tr>
+    </tbody>
+</table>
+
 
 {% endblock %}

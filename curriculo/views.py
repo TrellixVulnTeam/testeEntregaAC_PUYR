@@ -17,7 +17,7 @@ def curso(request, sigla):
 
 def disciplina(request,sigla,sigla_disciplina):
     context = {}
-    disciplina = Disciplina.objects.get(identicador=sigla_disciplina)
+    disciplina = Disciplina.objects.get(identificador=sigla_disciplina)
     context = {
         "disciplina": disciplina
     }
