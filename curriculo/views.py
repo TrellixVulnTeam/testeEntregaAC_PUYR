@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404
-from curriculo.models import Curso
+from curriculo.models import Curso, Disciplina
 
 def curso(request, sigla):
     curso = get_object_or_404(Curso, sigla=sigla)
