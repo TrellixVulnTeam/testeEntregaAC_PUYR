@@ -1,10 +1,8 @@
 from django.contrib import admin
-
 from .models import Curso, Disciplina, DisciplinaOfertada
-# Register your models here.
 
 class CursoAdmin(admin.ModelAdmin):
-    list_display = ("nome", "sigla", "tipo", "noturno", "diurno")
+    list_display = ("nome", "sigla", "tipo", "noturno", "diurno","duracao")
     list_filter = ("tipo", "noturno", "diurno")
     search_fields = ("nome", "sigla")
 

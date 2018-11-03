@@ -42,7 +42,7 @@ class Disciplina(models.Model):
     )
 
     identificador = models.CharField(
-        'Identificador',
+        'Sigla',
         max_length=30,
         unique=True
     )
@@ -151,9 +151,6 @@ class DisciplinaOfertada(models.Model):
     criterio_de_avaliacao = models.TextField("Critério de Avaliação", blank=True)
 
     plano_de_aulas = models.TextField("Plano de Aulas", blank=True)
-
-    def __str__(self):
-        return '{}-{}-{}-{}'.format(self.ano, self.semestre, self.curso.sigla, self.disciplina.nome)
 
     class Meta:
         db_table = 'DISCIPLINA_OFERTADA'
