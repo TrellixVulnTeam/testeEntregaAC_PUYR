@@ -3,8 +3,7 @@ from curriculo.models import Curso
 
 def curso(request, sigla):
     curso = get_object_or_404(Curso, sigla=sigla)
-    #Curso.objects.get(sigla=sigla)
-
+    
     context = {
         "atual": curso
     }

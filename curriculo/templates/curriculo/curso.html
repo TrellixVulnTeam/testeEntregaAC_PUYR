@@ -5,21 +5,20 @@
 {% endblock %}
 
 {% block conteudo %}
-<h1>{{ atual.nome }}</h1>
+  <h1>{{ atual.nome }}</h1>
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Semestre I</h5>
-    <!-- <p class="card-text">{{ atual.descricao }}</p> -->
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Semestre I</h5>
+      <!-- <p class="card-text">{{ atual.descricao }}</p> -->
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Coordenador: {{ atual.coordenador }}</li>
+      <li class="list-group-item">
+        <a href="{% url 'disciplina' atual.sigla 'BD' %}" class="card-link">
+          {{ atual.sigla }}
+        </a>
+      </li>
+    </ul>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Coordenador: {{ atual.coordenador }}</li>
-    <li class="list-group-item">
-      <a href="{% url 'disciplina' atual.sigla 'BD' %}" class="card-link">
-        {{ atual.sigla }}
-      </a>
-    </li>
-  </ul>
-</div>
-
 {% endblock %}
