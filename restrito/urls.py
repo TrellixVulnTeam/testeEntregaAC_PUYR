@@ -6,5 +6,6 @@ app_name = "restrito"
 
 
 urlpatterns = [
-    path('aluno/', views.aluno, name="aluno")
+    path('aluno/', views.aluno, name="aluno"),
+    path('professor/', views.professor, name="professor")
 ]

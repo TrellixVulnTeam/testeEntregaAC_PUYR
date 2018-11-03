@@ -8,60 +8,64 @@
     <link rel="stylesheet" href="/static/css/grid.css">
     <link rel="stylesheet" href="/static/css/app.css?v=2.3">
 
-
     <header id="header">
-        <div class="row">
-            <div class="one column">
-                <div class="row">
-                    <div class="row bg">
-                        <div class="container">
-                            <div class="one column">
-                                <h1>
-                                        FACULDADE IMPACTA
-                                </h1>
-                                <a href="" class="btn btn-blue center">INSCREVA-SE JÁ</a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row bg">
+            <div class="container">
+                <div class="one column">
+                    <h1>FACULDADE IMPACTA</h1>
+                    <a href="" class="btn btn-blue center">INSCREVA-SE JÁ</a>
                 </div>
-            </div>            
+            </div>
         </div>
     </header>
+    <br>
     <section>
-            <div class="row">
-                <div class="center">
-                    <h2 class="color center">
-                        CONHEÇA NOSSOS CURSOS
-                    </h2><br>
-                        <a href="" class="btn btn-blue center">CURSOS</a>
-                        <a href="" class="btn btn-blue center">CURSOS</a>
-                        <a href="" class="btn btn-blue center">CURSOS</a>
+        <div class="row bg">
+            <div class="container">
+                <div class="one column center">
+                    <h2 class="color">CONHEÇA NOSSOS CURSOS</h2>
+                    <br>
+                    <a href="{% url 'curso' 'SI' %}" class="btn btn-blue">Sistemas de Informação</a>
+                    <a href="{% url 'curso' 'ADS' %}" class="btn btn-blue">Análise e Desenvolvimento de Sistemas</a>
+                    <a href="{% url 'curso' 'BD' %}" class="btn btn-blue">Banco de Dados</a>
+                </div>
+                <br>
+                <p class="text-sm-justify">
+                    Considerada uma das melhores faculdades com foco em tecnologia do País, 
+                    a Faculdade Impacta oferece cursos de Graduação, Pós-Graduação e MBA e cursos técnicos. 
+                    Conheça quais são as áreas de conhecimento que a Impacta aborda e saiba um pouco mais sobre cada curso:
+                </p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="row bg">
+            <div class="container">
+                <div class="one column center">
+                    <a href="" class="btn btn-blue center">VESTIBULAR 2019</a>
                 </div>
             </div>
-        </section><br><br>
-        <p class="justify">
-                Considerada uma das melhores faculdades com foco em tecnologia do País, 
-                a Faculdade Impacta oferece cursos de Graduação, Pós-Graduação e MBA e cursos técnicos. 
-                Conheça quais são as áreas de conhecimento que a Impacta aborda e saiba um pouco mais sobre cada curso:
-            </p>
-    <section><br>
-            <div class="row">
-                <a href="" class="btn btn-blue center">VESTIBULAR 2019</a>
-            </div>
-    <section><br><br>
-            <div class="row">
-                <h2 class="color center">
-                        PRÊMIOS E RECONHECIMENTOS
-                </h2>
-            </div>
+        </div>
     </section>
-        <p class="justify">
-            A Faculdade Impacta é altamente reconhecida por sua atuação no mercado da educação, 
-            o que comprova o compromisso da Instituição com o ensino de qualidade e a dedicação do 
-            Grupo Impacta em transformar a sociedade através da tecnologia. Desta maneira, 
-            ao longo dos anos a Faculdade Impacta tem recebido prêmios e reconhecimentos 
-            que são resultados do trabalho contínuo de professores e funcionários e da determinação de seus alunos.
-        </p>
+    <hr>
+    <section>
+        <div class="row bg">
+            <div class="container">
+                <div class="one column center">
+                    <h2 class="color center">
+                        PRÊMIOS E RECONHECIMENTOS
+                    </h2>
+                </div>
+                <p class="text-sm-justify">
+                    A Faculdade Impacta é altamente reconhecida por sua atuação no mercado da educação, 
+                    o que comprova o compromisso da Instituição com o ensino de qualidade e a dedicação do 
+                    Grupo Impacta em transformar a sociedade através da tecnologia. Desta maneira, 
+                    ao longo dos anos a Faculdade Impacta tem recebido prêmios e reconhecimentos 
+                    que são resultados do trabalho contínuo de professores e funcionários e da determinação de seus alunos.
+                </p>
+            </div>
+        </div>
     </section>
 
 {% endblock  %}
