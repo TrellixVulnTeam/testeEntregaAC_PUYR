@@ -1,24 +1,29 @@
 {% extends "base.html" %}
 
 {% block titulo %}
-  {{ atual.sigla }}
+  {{ curso.sigla }}
 {% endblock %}
 
 {% block conteudo %}
-  <h1>{{ atual.nome }}</h1>
+  <h1>{{ curso.nome }}</h1>
 
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">Semestre I</h5>
-      <!-- <p class="card-text">{{ atual.descricao }}</p> -->
+      <p class="card-text">{{ curso.sobre }}</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Coordenador: {{ atual.coordenador }}</li>
-      <li class="list-group-item">
-        <a href="{% url 'disciplina' atual.sigla 'BD' %}" class="card-link">
-          {{ atual.sigla }}
-        </a>
-      </li>
+      {% for sem in curso.semestres %}
+        <li class="list-group-item">
+            {{ sem }}
+        </li>
+      {% endfor %}  
+      {% for dof in disciplinas_ofertadas%}
+        <li class="list-group-item">
+          <a href="{% url 'disciplina' curso.sigla dof.disciplina.identificador %}" class="card-link">
+            {{ dof.disciplina.identificador }} - {{ dof.disciplina }}
+          </a>
+        </li>
+      {% endfor %}
     </ul>
   </div>
 {% endblock %}
