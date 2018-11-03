@@ -1,12 +1,15 @@
 from django.shortcuts import render,get_object_or_404
 from curriculo.models import Curso, Disciplina, DisciplinaOfertada
+from datetime import datetime
 
 def curso(request, sigla):
     curso = get_object_or_404(Curso, sigla=sigla)
     curso.semestres = [
         'Semestre 2',
     ]
-    disciplinas = DisciplinaOfertada.objects.filter(ano=2018,semestre=2,curso=curso)
+    ano = datetime.now().year
+    sem_corrente = 1 if datetime.now().month <=6 else 2
+    disciplinas = DisciplinaOfertada.objects.filter(ano=ano,semestre=sem_corrente,curso=curso)
 
     context = {
         "curso": curso,
