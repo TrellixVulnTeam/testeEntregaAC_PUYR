@@ -1,25 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
+from curriculo.models import Curso
 
 def curso(request, sigla):
-    cursos = {
-        "SI": {"nome":"Sistemas da Informação"
-             , "sigla":"SI"
-             , "descricao":"A Graduação de Sistemas de Informação prepara o aluno para ser um profissional transformador do mercado, desenvolvendo soluções inovadoras e criativas na construção e utilização de Sistemas de Informação."
-             , "coordenador": "Osvaldo Kotaro Takai"
-             , "grade": {"semestre":"1","disciplina": "Comunicação e Expressão (EAD)","sigla_disciplina":"CE"}},
-        "ADS": {"nome":"Análise e Desenvolvimento de Sistemas"
-             , "sigla":"ADS"
-             , "descricao":"A Graduação de Sistemas de Informação prepara o aluno para ser um profissional transformador do mercado, desenvolvendo soluções inovadoras e criativas na construção e utilização de Sistemas de Informação."
-             , "coordenador": "Ana Cristina dos Santos"
-             , "grade": {"semestre":"2","disciplina": "Tecnologia WEB","sigla_disciplina":"TecWeb"}},
-        "BD": {"nome":"Banco de Dados", "sigla":"BD"
-               , "descricao":"A Graduação de Sistemas de Informação prepara o aluno para ser um profissional transformador do mercado, desenvolvendo soluções inovadoras e criativas na construção e utilização de Sistemas de Informação."
-             , "coordenador": "Osvaldo Kotaro Takai"
-             , "grade": {"semestre":"1","disciplina": "Fundamentos de Banco de Dados","sigla_disciplina":"FBD"}},
-    }
+    curso = get_object_or_404(Curso, sigla=sigla)
+    #Curso.objects.get(sigla=sigla)
 
     context = {
-        "atual": cursos[sigla]
+        "atual": curso
     }
     return render(request, "curriculo/curso.html", context)
 
@@ -33,4 +20,5 @@ def disciplina(request,sigla,sigla_disciplina):
     context = {
         "disciplina_data": disciplinas[sigla_disciplina]
     }
+
     return render(request, "curriculo/disciplina.html", context)
